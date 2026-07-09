@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "./new/Logo";
 import FooterTop from "./new/FooterTop";
-import SocialMedia from "./new/SocialMedia";
+
 import { categoriesData, quickLinksData } from "@/constants";
 
 const Footer = () => {
@@ -19,11 +19,7 @@ const Footer = () => {
               Discover curated furniture collections at Tulos, blending style
               and comfort to elevate your living spaces.
             </p>
-            <SocialMedia
-              className="text-darkColor/60"
-              iconClassName="border-darkColor/60 hover:border-darkColor hover:text-darkColor"
-              tooltipClassName="bg-darkColor text-white"
-            />
+
           </div>
 
           <div>

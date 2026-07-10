@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
-//import { HiMinus, HiPlus } from "react-icons/hi2";
+import { HiMinus, HiPlus } from "react-icons/hi2";
 //import toast from "react-hot-toast";
 //import useCartStore from "@/store";
 //import { Product } from "@/sanity.types";
@@ -42,7 +42,7 @@ const QuantityButtons = ({ product, className, borderStyle }: Props) => {
         onClick={handleRemoveProduct}
         disabled={itemCount === 0 || isOutOfStock}
       >
-        {/* <HiMinus /> */}
+        <HiMinus />
       </Button>
       <span className="font-semibold w-8 text-center text-darkColor">
         {itemCount}
@@ -57,7 +57,7 @@ const QuantityButtons = ({ product, className, borderStyle }: Props) => {
         }}
         disabled={isOutOfStock}
       >
-        {/* <HiPlus /> */}
+        <HiPlus />
       </Button>
     </div>
   );

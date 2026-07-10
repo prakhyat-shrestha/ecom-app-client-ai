@@ -136,3 +136,9 @@ export const products: Product[] = [
     variant: "hoodie",
   },
 ];
+
+
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug);
+}

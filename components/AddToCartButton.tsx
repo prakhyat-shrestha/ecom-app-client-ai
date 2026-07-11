@@ -2,10 +2,10 @@
 //import { Product } from "@/sanity.types";
 import { Product } from "@/types/product";
 import React, { useEffect, useState } from "react";
-//import toast from "react-hot-toast";
+import toast from "react-hot-toast";
 import PriceFormatter from "./PriceFormatter";
 import { Button } from "./ui/button";
-//import useCartStore from "@/store";
+import useCartStore from "@/store";
 import QuantityButtons from "./QuantityButtons";
 import { cn } from "@/lib/utils";
 
@@ -15,7 +15,7 @@ interface Props {
 }
 
 const AddToCartButton = ({ product, className }: Props) => {
-  //const { addItem, getItemCount } = useCartStore();
+const { addItem, getItemCount } = useCartStore();
   const [isClient, setIsClient] = useState(false);
 
   const itemCount = 1;
@@ -52,10 +52,10 @@ const AddToCartButton = ({ product, className }: Props) => {
       ) : (
         <Button
           onClick={() => {
-           // addItem(product);
-            // toast.success(
-            //   `${product?.name?.substring(0, 12)}... added successfully!`
-            // );
+           addItem(product);
+            toast.success(
+              `${product?.name?.substring(0, 12)}... added successfully!`
+            );
           }}
           disabled={isOutOfStock}
           className={cn(
